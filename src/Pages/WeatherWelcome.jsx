@@ -1,7 +1,9 @@
 import React from "react";
 import umb from "../assets/umbrella.png";
+import { useNavigate } from "react-router-dom";
 
 const WeatherWelcome = () => {
+  const navigate = useNavigate()
   return (
     // main div 
     <div className="bg-primary h-[100vh] flex justify-center items-center">
@@ -18,7 +20,9 @@ const WeatherWelcome = () => {
         <img className="w-25" src={umb} alt="" />
         <h1 className="text-6xl font-bold text-white">Breeze</h1>
         <h3 className="text-2xl text-gray-400">Weather App</h3>
-        <button className="bg-bright-blue p-4 rounded-4xl w-[10rem] text-white mt-[1rem]">Get Started</button>
+        <button className="bg-bright-blue p-4 rounded-4xl w-[10rem] text-white mt-[1rem]"
+         onClick={()=> navigate("/current-city")}
+        >Get Started</button>
         </div>
       </div>
     </div>
