@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Components/Sidebar'
+import Searchbar from '../Components/Searchbar'
 
 const Layout = () => {
   return (
@@ -11,7 +12,7 @@ const Layout = () => {
 
       {/* searchbar */}
       <div>
-      <h1 className='text-white'>SearchBar</h1>
+      <Searchbar />
       <Outlet />
       </div>
       
